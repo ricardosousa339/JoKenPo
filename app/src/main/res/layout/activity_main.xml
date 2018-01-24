@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/principal"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="?attr/colorButtonNormal"
+    tools:context="com.example.ricardosouza.jokenpo.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="Escolha sua jogada"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <ImageButton
+        android:id="@+id/buttonPedra"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonTesoura"
+        android:layout_toStartOf="@+id/buttonPapel"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pedra_recortada" />
+
+    <ImageButton
+        android:id="@+id/buttonPapel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonTesoura"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/papel_recortado" />
+
+    <ImageButton
+        android:id="@+id/buttonTesoura"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="29dp"
+        android:layout_toEndOf="@+id/buttonPapel"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/tesoura_recortada" />
+
+    <ImageView
+        android:id="@+id/imageJogada1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/tesoura_recortada"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/buttonPapel"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textAppearance="@android:style/TextAppearance.Material.Display2"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/imageJogada1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:id="@+id/textVencedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        android:layout_below="@+id/imageJogada1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <ImageView
+        android:id="@+id/imageJogada2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/pedra_recortada"
+        android:layout_alignTop="@+id/imageJogada1"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
